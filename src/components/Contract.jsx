@@ -226,7 +226,7 @@ export default function Contract() {
           </h2>
 
           <p className="mx-auto max-w-2xl text-sm leading-7 text-[#D8E7FF]/75 sm:text-base">
-            BVT is issued on the TRON Network using the BEB-20 token standard.
+            BVT is issued on the Blockchain Network using the BEP-20 token standard.
             Always verify the official contract address before interacting
             with the token.
           </p>
@@ -292,7 +292,7 @@ export default function Contract() {
 
               <div className="rounded-full border border-[#D4A63A]/20 bg-[#D4A63A]/5 px-4 py-2">
                 <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#E6C875]">
-                  TRON • BEB-20
+                  Blockchain • BEP-20
                 </span>
               </div>
             </div>
@@ -445,7 +445,7 @@ export default function Contract() {
             <div className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-[#D4A63A] shadow-[0_0_10px_rgba(36,155,255,0.8)]" />
               <span className="font-display text-[9px] uppercase tracking-[0.18em] text-[#D8E7FF]/52">
-                TRON Network
+                BNB-Network
               </span>
             </div>
 
@@ -454,7 +454,7 @@ export default function Contract() {
             <div className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-[#FFD84D] shadow-[0_0_10px_rgba(255,216,77,0.7)]" />
               <span className="font-display text-[9px] uppercase tracking-[0.18em] text-[#D8E7FF]/52">
-                BEB-20 Standard
+                BEP-20 Standard
               </span>
             </div>
 

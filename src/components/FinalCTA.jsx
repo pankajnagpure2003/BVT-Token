@@ -376,7 +376,7 @@ export default function FinalCTA() {
 
               {/* Secondary */}
               <motion.a
-                href="#faq"
+                href="/Whitepaper.pdf" target="_blank" rel="noopener noreferrer"
                 whileHover={
                   reduceMotion
                     ? undefined
@@ -419,7 +419,7 @@ export default function FinalCTA() {
               <span className="h-1.5 w-1.5 rounded-full bg-[#FFD84D] shadow-[0_0_9px_rgba(255,216,77,0.8)]" />
 
               <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-[#BFD8FF]/35">
-                TRON • BEB-20
+                • BEP-20
               </span>
             </div>
 

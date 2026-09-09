@@ -28,7 +28,7 @@ const approach = [
 
 const pillars = [
   {
-    title: 'BEB-20 Utility Token',
+    title: 'BEP-20 Utility Token',
     copy: 'Issued on the Blockchain Network for fast, low-cost transactions across the ecosystem.',
   },
   {
