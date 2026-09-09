@@ -164,8 +164,9 @@ export default function Header() {
           </a>
 
           <motion.a
-            href="#contract"
-            onClick={(e) => handleNavClick(e, '#contract')}
+            href="https://bvt-presale-page.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group relative isolate flex min-w-[112px] cursor-pointer items-center justify-center overflow-hidden rounded-full px-6 py-2.5 text-sm font-semibold text-navy-950"
             style={{
               background:
@@ -309,15 +310,16 @@ export default function Header() {
                 </a>
 
                 <a
-                  href="#contract"
-                  onClick={(e) => handleNavClick(e, '#contract')}
-                  className="relative isolate flex flex-1 items-center justify-center overflow-hidden rounded-full px-4 py-2.5 text-center text-sm font-semibold text-navy-950"
+                  href="https://bvt-presale-page.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative z-[100] isolate flex flex-1 cursor-pointer items-center justify-center overflow-hidden rounded-full px-4 py-2.5 text-center text-sm font-semibold text-navy-950"
                   style={{
                     background:
                       'linear-gradient(110deg, #8A6717 0%, #D9A934 22%, #F2DD9B 50%, #D9A934 78%, #8A6717 100%)',
                   }}
                 >
-                  <span className="relative z-10">
+                  <span className="relative z-10 pointer-events-none">
                     Explore BVT
                   </span>
                 </a>
