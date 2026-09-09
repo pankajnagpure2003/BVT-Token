@@ -19,7 +19,7 @@ const glance = [
   { label: 'Token', value: 'BVT TOKEN' },
   { label: 'Symbol', value: 'BVT' },
   { label: 'Network', value: 'BEP-20' },
-  { label: 'Standard', value: 'BEP-20' },
+ 
   { label: 'Total Supply', value: '10 Billion' },
   { label: 'Decimals', value: '18' },
 ]
