@@ -29,11 +29,11 @@ const approach = [
 const pillars = [
   {
     title: 'BEB-20 Utility Token',
-    copy: 'Issued on the TRON Network for fast, low-cost transactions across the ecosystem.',
+    copy: 'Issued on the Blockchain Network for fast, low-cost transactions across the ecosystem.',
   },
   {
     title: '10 Billion Fixed Supply',
-    copy: 'A transparent, fixed total supply of 10,000,000,000 BVT with 6 decimals.',
+    copy: 'A transparent, fixed total supply of 10,000,000,000 BVT with 18 decimals.',
   },
   {
     title: 'Roadmap-Driven Growth',
@@ -482,7 +482,7 @@ export default function About() {
             <Reveal variant="rise" delay={0.26}>
               <p className="mb-4 max-w-xl leading-relaxed text-[#DDEBFF]/70">
                 BVT Token is the utility token of the BHAVISHYA Ecosystem,
-                built on the TRON blockchain using the BEB-20 standard.
+                Built on blockchain using the BEP-20 network.
               </p>
             </Reveal>
 

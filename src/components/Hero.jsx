@@ -18,10 +18,10 @@ const pillars = [
 const glance = [
   { label: 'Token', value: 'BVT TOKEN' },
   { label: 'Symbol', value: 'BVT' },
-  { label: 'Network', value: 'TRON' },
-  { label: 'Standard', value: 'BEB-20' },
+  { label: 'Network', value: 'BEP-20' },
+  { label: 'Standard', value: 'BEP-20' },
   { label: 'Total Supply', value: '10 Billion' },
-  { label: 'Decimals', value: '6' },
+  { label: 'Decimals', value: '18' },
 ]
 
 function SubHeading({ reduceMotion }) {
@@ -364,7 +364,7 @@ export default function Hero() {
               <span className="h-2 w-2 rounded-full bg-[#FFD84D] shadow-[0_0_12px_#FFD84D] animate-pulse" />
 
               <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-[#FFE477] sm:text-[11px] sm:tracking-[0.22em]">
-                Live on · TRON Network
+                Live on · BNB Network
               </span>
             </div>
           </Reveal>
@@ -458,8 +458,10 @@ export default function Hero() {
 </a>
 
               <a
-                href="#roadmap"
-                className="w-full rounded-full border border-[#5EAFFF]/30 bg-[#005EFF]/[0.04] px-6 py-3 text-center sm:w-auto sm:px-7 sm:py-3.5 sm:px-8 font-medium text-[#E8F2FF] transition-all duration-200 hover:border-[#FFD84D]/60 hover:bg-[#FFD84D]/[0.05] hover:text-[#FFE477]"
+                href="/Whitepaper.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative z-50 w-full cursor-pointer rounded-full border border-[#5EAFFF]/30 bg-[#005EFF]/[0.04] px-6 py-3 text-center sm:w-auto sm:px-7 sm:py-3.5 sm:px-8 font-medium text-[#E8F2FF] transition-all duration-200 hover:border-[#FFD84D]/60 hover:bg-[#FFD84D]/[0.05] hover:text-[#FFE477]"
               >
                 View Roadmap
               </a>

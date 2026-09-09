@@ -7,10 +7,10 @@ import CountUp from './CountUp'
 const DETAILS = [
   { label: 'Token Name', value: 'BVT TOKEN' },
   { label: 'Symbol', value: 'BVT' },
-  { label: 'Network', value: 'TRON' },
-  { label: 'Standard', value: 'BEB-20' },
+  { label: 'Network', value: 'BEP-20' },
+  { label: 'Symbol', value: 'BVT' },
   { label: 'Total Supply', value: '10,000,000,000 BVT' },
-  { label: 'Decimals', value: '6' },
+  { label: 'Decimals', value: '18' },
 ]
 
 const ALLOCATION = [
@@ -568,7 +568,7 @@ export default function Tokenomics() {
               </p>
 
               <p className="font-display text-2xl font-semibold text-white">
-                TRON
+                BEP-20
               </p>
 
               <div className="mt-4 h-[2px] w-10 bg-[#28A8FF] transition-all group-hover:w-20" />
@@ -595,11 +595,11 @@ export default function Tokenomics() {
               />
 
               <p className="mb-1 text-xs uppercase tracking-[0.18em] text-[#BFD8FF]/40">
-                Standard
+                Symbol
               </p>
 
               <p className="font-display text-2xl font-semibold text-white">
-                BEB-20
+                BVT
               </p>
 
               <div className="mt-4 h-[2px] w-10 bg-[#FFD84D] transition-all group-hover:w-20" />

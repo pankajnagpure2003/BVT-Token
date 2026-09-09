@@ -7,9 +7,9 @@ import Watermark from './Watermark'
 const DETAILS = [
   { label: 'Token Name', value: 'BVT TOKEN' },
   { label: 'Symbol', value: 'BVT' },
-  { label: 'Network', value: 'TRON' },
-  { label: 'Standard', value: 'BEB-20' },
-  { label: 'Decimals', value: '6' },
+  { label: 'Network', value: 'BEP-20' },
+  
+  { label: 'Decimals', value: '18' },
   { label: 'Total Supply', value: '10,000,000,000 BVT' },
 ]
 

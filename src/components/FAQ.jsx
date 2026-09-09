@@ -7,7 +7,7 @@ import Watermark from './Watermark'
 const QA = [
   {
     q: 'What is BVT Token?',
-    a: 'BVT Token is a BEB-20 utility token built on the TRON blockchain and designed for the BHAVISHYA Ecosystem.',
+    a: 'BVT Token is a BEP-20 utility token built on the blockchain and designed for the BHAVISHYA Ecosystem.',
   },
   {
     q: 'What is the BVT symbol?',
@@ -15,7 +15,7 @@ const QA = [
   },
   {
     q: 'Which blockchain does BVT use?',
-    a: 'BVT operates on the TRON Network using the BEB-20 standard.',
+    a: 'BVT operates on the Blockchain Network using the BEP-20 standard.',
   },
   {
     q: 'What is the total supply?',
@@ -23,7 +23,7 @@ const QA = [
   },
   {
     q: 'How many decimals does BVT have?',
-    a: 'BVT has 6 decimals.',
+    a: 'BVT has 18 decimals.',
   },
   {
     q: 'What is BVT used for?',

@@ -235,7 +235,7 @@ export default function Footer() {
                   </p>
 
                   <p className="mt-1 whitespace-nowrap text-xs font-medium text-white sm:text-sm">
-                    TRON · BEB-20
+                    · BEP-20
                   </p>
                 </div>
 
@@ -257,7 +257,7 @@ export default function Footer() {
                   </p>
 
                   <p className="mt-1 whitespace-nowrap text-xs font-medium text-white sm:text-sm">
-                    6
+                    18
                   </p>
                 </div>
 

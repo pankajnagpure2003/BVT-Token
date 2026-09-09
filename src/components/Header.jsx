@@ -156,8 +156,9 @@ export default function Header() {
         {/* Desktop Actions */}
         <div className="hidden items-center gap-3 lg:flex">
           <a
-            href="#faq"
-            onClick={(e) => handleNavClick(e, '#faq')}
+            href="/Whitepaper.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full border border-bone/20 px-4 py-2 text-sm font-medium text-white transition-all duration-300 hover:border-gold-400/70 hover:bg-gold-400/5 hover:text-gold-200"
           >
             Whitepaper
@@ -302,8 +303,9 @@ export default function Header() {
 
               <div className="flex gap-3 pt-4">
                 <a
-                  href="#faq"
-                  onClick={(e) => handleNavClick(e, '#faq')}
+                  href="/Whitepaper.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex-1 rounded-full border border-bone/20 px-4 py-2.5 text-center text-sm font-medium text-bone/85 transition-all duration-300 hover:border-gold-400/60 hover:text-gold-200"
                 >
                   Whitepaper
