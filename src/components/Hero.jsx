@@ -452,7 +452,7 @@ export default function Hero() {
   href="https://bvt-presale-page.vercel.app/"
   target="_blank"
   rel="noopener noreferrer"
-  className="relative z-50 w-full cursor-pointer rounded-full border border-[#FFE58A]/40 bg-gradient-to-b from-[#FFF4B0] via-[#FFD84D] to-[#D99A00] px-6 py-3 text-center font-serif text-[15px] font-semibold tracking-[0.02em] text-[#241600] shadow-[0_0_25px_rgba(255,200,40,0.22),inset_0_1px_0_rgba(255,255,255,0.45)] transition-all duration-300 hover:scale-[1.03] hover:from-[#FFF8C7] hover:via-[#FFE066] hover:to-[#E5A900] hover:shadow-[0_0_40px_rgba(255,216,77,0.4),inset_0_1px_0_rgba(255,255,255,0.6)] sm:w-auto sm:px-8 sm:py-3.5"
+  className="relative z-50 w-full cursor-pointer rounded-full border border-[#FFE58A]/40 bg-gradient-to-b from-[#FFF4B0] via-[#FFD84D] to-[#D99A00] px-6 py-3 text-center font-medium text-[15px] font-semibold tracking-[0.02em] text-[#241600] shadow-[0_0_25px_rgba(255,200,40,0.22),inset_0_1px_0_rgba(255,255,255,0.45)] transition-all duration-300 hover:scale-[1.03] hover:from-[#FFF8C7] hover:via-[#FFE066] hover:to-[#E5A900] hover:shadow-[0_0_40px_rgba(255,216,77,0.4),inset_0_1px_0_rgba(255,255,255,0.6)] sm:w-auto sm:px-8 sm:py-3.5"
 >
   Explore BVT
 </a>
