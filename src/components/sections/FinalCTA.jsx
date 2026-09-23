@@ -1,7 +1,9 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { ArrowRight, Sparkles } from 'lucide-react'
-import Reveal from './Reveal'
-import logo from '../assets/logo.webp'
+import { Link } from 'react-router-dom'
+import Reveal from '../ui/Reveal'
+import logo from '../../assets/logo.webp'
+import { WHITEPAPER_URL } from '../../constants/navigation'
 
 export default function FinalCTA() {
   const reduceMotion = useReducedMotion()
@@ -343,8 +345,8 @@ export default function FinalCTA() {
             <div className="flex flex-col gap-3 sm:flex-row">
 
               {/* Primary */}
-              <motion.a
-                href="#contract"
+              <motion.div
+                className="flex-1"
                 whileHover={
                   reduceMotion
                     ? undefined
@@ -360,23 +362,29 @@ export default function FinalCTA() {
                         scale: 0.98,
                       }
                 }
-                className="group relative flex flex-1 items-center justify-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-r from-[#FFD84D] via-[#FFD21C] to-[#F4A900] px-7 py-4 font-semibold text-[#020B2D] shadow-[0_0_30px_rgba(255,210,28,0.16)]"
               >
-                <span className="absolute inset-0 -translate-x-full bg-white/25 transition-transform duration-700 group-hover:translate-x-full" />
+                <Link
+                  to="/contract"
+                  className="group relative flex w-full items-center justify-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-r from-[#FFD84D] via-[#FFD21C] to-[#F4A900] px-7 py-4 font-semibold text-[#020B2D] shadow-[0_0_30px_rgba(255,210,28,0.16)]"
+                >
+                  <span className="absolute inset-0 -translate-x-full bg-white/25 transition-transform duration-700 group-hover:translate-x-full" />
 
-                <span className="relative">
-                  View Contract
-                </span>
+                  <span className="relative">
+                    View Contract
+                  </span>
 
-                <ArrowRight
-                  size={17}
-                  className="relative transition-transform duration-300 group-hover:translate-x-1"
-                />
-              </motion.a>
+                  <ArrowRight
+                    size={17}
+                    className="relative transition-transform duration-300 group-hover:translate-x-1"
+                  />
+                </Link>
+              </motion.div>
 
               {/* Secondary */}
               <motion.a
-                href="/Whitepaper.pdf" target="_blank" rel="noopener noreferrer"
+                href={WHITEPAPER_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={
                   reduceMotion
                     ? undefined

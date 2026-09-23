@@ -8,7 +8,7 @@ import {
   Rocket,
   Globe2,
 } from 'lucide-react'
-import Reveal from './Reveal'
+import Reveal from '../ui/Reveal'
 
 const FLOW = [
   {

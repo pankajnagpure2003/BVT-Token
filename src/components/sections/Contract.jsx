@@ -1,8 +1,8 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { ShieldCheck, ExternalLink, Copy, CheckCircle2 } from 'lucide-react'
 import { useState } from 'react'
-import Reveal from './Reveal'
-import Watermark from './Watermark'
+import Reveal from '../ui/Reveal'
+import Watermark from '../ui/Watermark'
 
 const DETAILS = [
   { label: 'Token Name', value: 'BVT TOKEN' },

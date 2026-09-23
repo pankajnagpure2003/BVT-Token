@@ -5,8 +5,8 @@ import {
   useTransform,
 } from 'framer-motion'
 import { useRef } from 'react'
-import Reveal from './Reveal'
-import Watermark from './Watermark'
+import Reveal from '../ui/Reveal'
+import Watermark from '../ui/Watermark'
 
 const PHASES = [
   {

@@ -1,11 +1,11 @@
 import { Blocks, Network, Users } from 'lucide-react'
 import { motion, useReducedMotion } from 'framer-motion'
-import Reveal from './Reveal'
-import Watermark from './Watermark'
-import logo from '../assets/about.webp'
-import card from '../assets/card.jpg'
-import card2 from '../assets/card2.jpg'
-import bg from '../assets/approachbg.jpg'
+import Reveal from '../ui/Reveal'
+import Watermark from '../ui/Watermark'
+import logo from '../../assets/about.webp'
+import card from '../../assets/card.jpg'
+import card2 from '../../assets/card2.jpg'
+import bg from '../../assets/approachbg.jpg'
 
 
 const approach = [

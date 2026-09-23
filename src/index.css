@@ -214,3 +214,149 @@ img {
   content-visibility: auto;
   contain-intrinsic-size: 1px 800px;
 }
+
+/* ================================
+   PRESALE PAGE (ported design)
+================================ */
+
+.glass-card {
+  background: linear-gradient(145deg, rgba(13, 27, 62, 0.76), rgba(5, 12, 26, 0.72));
+  border: 1px solid rgba(212, 175, 55, 0.16);
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(16px);
+}
+
+.glass-card-hover {
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.glass-card-hover:hover {
+  border-color: rgba(255, 215, 0, 0.42);
+  box-shadow: 0 22px 55px rgba(212, 175, 55, 0.1), 0 0 28px rgba(212, 175, 55, 0.08);
+}
+
+.gold-glow {
+  box-shadow: 0 0 35px rgba(212, 175, 55, 0.12), 0 25px 70px rgba(0, 0, 0, 0.25);
+}
+
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(212, 175, 55, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.045) 1px, transparent 1px);
+  background-size: 46px 46px;
+  mask-image: linear-gradient(to bottom, black, transparent 95%);
+}
+
+.section-padding {
+  width: min(1200px, 100%);
+  margin-inline: auto;
+  padding: 78px 24px;
+}
+
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 215, 0, 0.45);
+  border-radius: 11px;
+  padding: 13px 24px;
+  background: linear-gradient(135deg, #ffd700, #d4af37 55%, #b8860b);
+  color: #06101d;
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.17);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+  box-shadow: 0 13px 32px rgba(212, 175, 55, 0.3);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(212, 175, 55, 0.42);
+  border-radius: 11px;
+  padding: 13px 24px;
+  color: #f1d66a;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(212, 175, 55, 0.035);
+  transition: all 0.25s ease;
+}
+
+.btn-outline:hover {
+  transform: translateY(-2px);
+  background: rgba(212, 175, 55, 0.1);
+  border-color: #ffd700;
+  color: #fff;
+}
+
+.nav-link {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: rgba(226, 232, 240, 0.85);
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #ffd700;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes particle {
+  0% { transform: translate3d(0, 30px, 0) scale(0.7); opacity: 0; }
+  25% { opacity: 0.55; }
+  50% { transform: translate3d(18px, -10px, 0) scale(1); opacity: 0.8; }
+  75% { opacity: 0.35; }
+  100% { transform: translate3d(-8px, -75px, 0) scale(0.6); opacity: 0; }
+}
+
+@keyframes orb {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(30px, 20px, 0) scale(1.15); }
+}
+
+@keyframes orbReverse {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(-35px, -20px, 0) scale(1.12); }
+}
+
+@keyframes shine {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.animate-float { animation: float 4.5s ease-in-out infinite; }
+.animate-particle { animation: particle 7s ease-in-out infinite; }
+.animate-orb { animation: orb 9s ease-in-out infinite; }
+.animate-orb-reverse { animation: orbReverse 11s ease-in-out infinite; }
+.animate-shine {
+  background-size: 200% auto;
+  animation: shine 3s linear infinite;
+}
+
+@media (max-width: 767px) {
+  .section-padding {
+    padding: 58px 16px;
+  }
+
+  .btn-gold,
+  .btn-outline {
+    width: 100%;
+    padding: 13px 18px;
+  }
+}

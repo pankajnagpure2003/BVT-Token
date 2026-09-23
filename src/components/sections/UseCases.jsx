@@ -8,8 +8,8 @@ import {
   HeartPulse,
 } from 'lucide-react'
 import { motion, useReducedMotion } from 'framer-motion'
-import Reveal from './Reveal'
-import use from '../assets/bg.jpg'
+import Reveal from '../ui/Reveal'
+import use from '../../assets/bg.jpg'
 
 const CASES = [
   {

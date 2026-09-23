@@ -1,8 +1,8 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { Layers3, Coins, Network } from 'lucide-react'
-import Reveal from './Reveal'
-import Watermark from './Watermark'
-import CountUp from './CountUp'
+import Reveal from '../ui/Reveal'
+import Watermark from '../ui/Watermark'
+import CountUp from '../ui/CountUp'
 
 const DETAILS = [
   { label: 'Token Name', value: 'BVT TOKEN' },

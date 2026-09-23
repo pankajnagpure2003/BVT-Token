@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion'
-import logo from '../assets/logo.webp'
+import logo from '../../assets/logo.webp'
 
 const POSITIONS = {
   'top-right': 'top-[-10%] right-[-6%]',

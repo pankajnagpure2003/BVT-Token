@@ -4,8 +4,10 @@ import {
   useReducedMotion,
 } from 'framer-motion'
 import { useEffect, useState } from 'react'
-import logo from '../assets/logo.webp'
-import Reveal from './Reveal'
+import { Link } from 'react-router-dom'
+import logo from '../../assets/logo.webp'
+import Reveal from '../ui/Reveal'
+import { PRESALE_PATH } from '../../constants/navigation'
 
 // const headline = ['Powering', 'the', 'BHAVISHYA', 'Ecosystem']
 
@@ -448,14 +450,12 @@ export default function Hero() {
 
           <Reveal variant="rise" delay={0.66}>
             <div className="mb-6 flex flex-col gap-2.5 sm:mb-10 sm:flex-row sm:flex-wrap sm:gap-3.5 md:mb-12 lg:mb-14">
-              <a
-  href="https://bvt-presale-page.vercel.app/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="relative z-50 w-full cursor-pointer rounded-full border border-[#FFE58A]/40 bg-gradient-to-b from-[#FFF4B0] via-[#FFD84D] to-[#D99A00] px-6 py-3 text-center font-medium text-[15px] font-semibold tracking-[0.02em] text-[#241600] shadow-[0_0_25px_rgba(255,200,40,0.22),inset_0_1px_0_rgba(255,255,255,0.45)] transition-all duration-300 hover:scale-[1.03] hover:from-[#FFF8C7] hover:via-[#FFE066] hover:to-[#E5A900] hover:shadow-[0_0_40px_rgba(255,216,77,0.4),inset_0_1px_0_rgba(255,255,255,0.6)] sm:w-auto sm:px-8 sm:py-3.5"
->
-  Explore BVT
-</a>
+              <Link
+                to={PRESALE_PATH}
+                className="relative z-50 w-full cursor-pointer rounded-full border border-[#FFE58A]/40 bg-gradient-to-b from-[#FFF4B0] via-[#FFD84D] to-[#D99A00] px-6 py-3 text-center text-[15px] font-semibold tracking-[0.02em] text-[#241600] shadow-[0_0_25px_rgba(255,200,40,0.22),inset_0_1px_0_rgba(255,255,255,0.45)] transition-all duration-300 hover:scale-[1.03] hover:from-[#FFF8C7] hover:via-[#FFE066] hover:to-[#E5A900] hover:shadow-[0_0_40px_rgba(255,216,77,0.4),inset_0_1px_0_rgba(255,255,255,0.6)] sm:w-auto sm:px-8 sm:py-3.5"
+              >
+                Buy Presale
+              </Link>
 
               <a
                 href="/Whitepaper.pdf"

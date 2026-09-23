@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { ChevronDown, HelpCircle } from 'lucide-react'
-import Reveal from './Reveal'
-import Watermark from './Watermark'
+import Reveal from '../ui/Reveal'
+import Watermark from '../ui/Watermark'
 
 const QA = [
   {
