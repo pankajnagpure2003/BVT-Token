@@ -5,9 +5,10 @@ export const NAV_LINKS = [
   { label: 'Roadmap', path: '/roadmap' },
   { label: 'Ecosystem', path: '/ecosystem' },
   { label: 'Tokenomics', path: '/tokenomics' },
-  { label: 'Presale', path: '/presale' },
+  
   { label: 'Contract', path: '/contract' },
   { label: 'FAQ', path: '/faq' },
+  
 ]
 
 export const LEGAL_LINKS = [

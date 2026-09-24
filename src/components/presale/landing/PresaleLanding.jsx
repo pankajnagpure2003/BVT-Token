@@ -102,22 +102,53 @@ function Hero() {
             <span className="h-2 w-2 animate-pulse rounded-full bg-[#FFD700]" /> Presale Is Live
           </motion.div>
 
-         <motion.h1 variants={fadeIn} className="text-4xl font-black leading-[1.02] tracking-tight sm:text-5xl md:text-6xl xl:text-7xl">
-  <span className="font-['Orbitron'] text-white font-extrabold tracking-wide">
-  BVT TOKEN
-</span>
-<br />
-<span
-  className="font-['Orbitron'] font-extrabold 
-             bg-[linear-gradient(94.58deg,_#B17E1C_3.26%,_#F2DE75_28.5%,_#C9A43E_95.37%)] 
-             bg-clip-text text-transparent 
-             animate-shine tracking-wider"
+<motion.h1
+  variants={fadeIn}
+  className="mb-5 max-w-3xl font-display font-semibold tracking-[-0.025em] sm:mb-6"
 >
-  PRESALE
-</span>
+  <motion.span
+    initial={{ opacity: 0, y: 24 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+    className="
+      block
+      text-[clamp(1.55rem,8.2vw,2.1rem)]
+      leading-[1.05]
+      text-white
+      drop-shadow-[0_2px_14px_rgba(255,255,255,0.18)]
+      sm:text-[2.5rem]
+      sm:leading-[1.05]
+      md:text-[3.4rem]
+      md:leading-[1.05]
+      lg:text-6xl
+      xl:text-[4.15rem]
+    "
+  >
+    BVT TOKEN
+  </motion.span>
 
+  <motion.span
+    initial={{ opacity: 0, y: 24 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.7, delay: 0.33, ease: [0.22, 1, 0.36, 1] }}
+    className="
+      mt-1
+      block
+      text-[clamp(1.55rem,8.2vw,2.1rem)]
+      leading-[1.05]
+      sm:text-[2.5rem]
+      sm:leading-[1.05]
+      md:text-[3.4rem]
+      md:leading-[1.05]
+      lg:text-6xl
+      xl:text-[4.15rem]
+    "
+  >
+    <span className="bg-gradient-to-b from-[#FFF7C7] via-[#FFD84D] to-[#D99A00] bg-clip-text text-transparent drop-shadow-[0_3px_16px_rgba(255,216,77,0.25)] animate-shine">
+      PRESALE
+    </span>
+  </motion.span>
 </motion.h1>
-
 
           <motion.h2 variants={fadeIn} className="mt-5 text-lg font-bold text-[#D4AF37] sm:text-2xl">
             Be Part of the BHAVISHYA Ecosystem
