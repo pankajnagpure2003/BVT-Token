@@ -337,7 +337,7 @@ function PresaleStatus() {
                   </div>
 
                   <div className="gold-text text-2xl font-black sm:text-3xl">
-                    $0.0025
+                    $0.01
                   </div>
 
                   <p className="mt-1 text-xs text-slate-600">
@@ -345,7 +345,7 @@ function PresaleStatus() {
                   </p>
                 </div>
 
-                <div className="group rounded-2xl border border-blue-400/10 bg-gradient-to-br from-blue-500/8 to-transparent p-5 transition-all duration-300 hover:border-blue-400/25">
+                {/* <div className="group rounded-2xl border border-blue-400/10 bg-gradient-to-br from-blue-500/8 to-transparent p-5 transition-all duration-300 hover:border-blue-400/25">
                   <div className="mb-2 flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-slate-500">
                     <TrendingUp
                       size={14}
@@ -361,7 +361,7 @@ function PresaleStatus() {
                   <p className="mt-1 text-xs text-slate-600">
                     per BVT
                   </p>
-                </div>
+                </div> */}
 
               </div>
             </div>
@@ -439,7 +439,7 @@ function PresaleDetails() {
   const details = [
     ['Token Name', 'BVT TOKEN'], ['Symbol', 'BVT'], ['Blockchain', 'Blockchain'], ['Standard', 'BEP-20'],
     ['Total Supply', '10,000,000,000 BVT'], ['Decimals', '18'], ['Presale Allocation', 'To Be Announced'],
-    ['Presale Price', '$0.0025'], ['Minimum Purchase', '100 TRX'], ['Maximum Purchase', '500,000 TRX'],
+    ['Presale Price', '$0.01'], ['Minimum Purchase', '100 TRX'], ['Maximum Purchase', '500,000 TRX'],
     ['Token Claim', 'After Presale Ends'], ['Listing Price', 'To Be Announced']
   ]
   const stages = [
