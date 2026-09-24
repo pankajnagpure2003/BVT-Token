@@ -1,0 +1,362 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-navy-950 text-bone font-sans antialiased;
+  font-feature-settings: 'ss01' on;
+}
+
+/* ================================
+   GOLD GRADIENT TEXT
+================================ */
+
+.gold-text {
+  background: linear-gradient(90deg, #D9A934, #F2DD9B, #FFFFFF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ================================
+   SELECTION / SCROLLBAR / FOCUS
+================================ */
+
+::selection {
+  background: #E8C465;
+  color: #03060F;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #03060F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1B2A5C;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B4871F;
+}
+
+:focus-visible {
+  outline: 2px solid #E8C465;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ================================
+   GRID BACKGROUND
+================================ */
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(232, 196, 101, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 196, 101, 0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+/* ================================
+   HERO GRAPHIC
+================================ */
+
+.hero-graphic {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(79, 163, 239, 0.14), transparent 20%),
+    radial-gradient(circle at 74% 16%, rgba(232, 196, 101, 0.18), transparent 22%),
+    radial-gradient(circle at 84% 60%, rgba(232, 196, 101, 0.1), transparent 26%),
+    linear-gradient(120deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0) 40%, rgba(232, 196, 101, 0.04) 100%);
+  animation: heroDrift 18s ease-in-out infinite alternate;
+}
+
+@keyframes heroDrift {
+  0% { transform: scale(1) translate3d(0, 0, 0); }
+  100% { transform: scale(1.07) translate3d(0, 14px, 0); }
+}
+
+.hero-ring {
+  position: absolute;
+  border: 1px solid rgba(232, 196, 101, 0.16);
+  border-radius: 9999px;
+  box-shadow: 0 0 30px rgba(232, 196, 101, 0.08);
+}
+
+/* ================================
+   EMBLEM (logo) SCENE
+================================ */
+
+.emblem-scene {
+  position: relative;
+  width: 26rem;
+  height: 26rem;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emblem-aura {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(232, 196, 101, 0.4), rgba(79, 163, 239, 0.14) 32%, transparent 72%);
+  filter: blur(18px);
+  opacity: 0.85;
+}
+
+.emblem-orbit {
+  position: absolute;
+  width: 23rem;
+  height: 23rem;
+  border-radius: 9999px;
+  border: 1px dashed rgba(232, 196, 101, 0.35);
+}
+
+.emblem-image {
+  position: relative;
+  width: 78%;
+  height: 78%;
+  object-fit: contain;
+  filter: drop-shadow(0 25px 45px rgba(0, 0, 0, 0.55));
+  z-index: 2;
+}
+
+@media (max-width: 1023px) {
+  .emblem-scene {
+    width: 20rem;
+    height: 20rem;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .emblem-scene {
+    width: 15.5rem;
+    height: 15.5rem;
+  }
+}
+
+/* ================================
+   TEXT HELPERS
+================================ */
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.numeral {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ================================
+   BUTTON SHIMMER
+================================ */
+
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.55) 50%, transparent 100%);
+  transform: skewX(-20deg);
+  animation: shimmer-sweep 3.4s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes shimmer-sweep {
+  0% { left: -60%; }
+  35%, 100% { left: 130%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-shimmer::after {
+    animation: none;
+    display: none;
+  }
+}
+
+/* Performance helpers */
+img {
+  max-width: 100%;
+}
+
+.content-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 800px;
+}
+
+/* ================================
+   PRESALE PAGE (ported design)
+================================ */
+
+.glass-card {
+  background: linear-gradient(145deg, rgba(13, 27, 62, 0.76), rgba(5, 12, 26, 0.72));
+  border: 1px solid rgba(212, 175, 55, 0.16);
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(16px);
+}
+
+.glass-card-hover {
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.glass-card-hover:hover {
+  border-color: rgba(255, 215, 0, 0.42);
+  box-shadow: 0 22px 55px rgba(212, 175, 55, 0.1), 0 0 28px rgba(212, 175, 55, 0.08);
+}
+
+.gold-glow {
+  box-shadow: 0 0 35px rgba(212, 175, 55, 0.12), 0 25px 70px rgba(0, 0, 0, 0.25);
+}
+
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(212, 175, 55, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.045) 1px, transparent 1px);
+  background-size: 46px 46px;
+  mask-image: linear-gradient(to bottom, black, transparent 95%);
+}
+
+.section-padding {
+  width: min(1200px, 100%);
+  margin-inline: auto;
+  padding: 78px 24px;
+}
+
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 215, 0, 0.45);
+  border-radius: 11px;
+  padding: 13px 24px;
+  background: linear-gradient(135deg, #ffd700, #d4af37 55%, #b8860b);
+  color: #06101d;
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.17);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+  box-shadow: 0 13px 32px rgba(212, 175, 55, 0.3);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(212, 175, 55, 0.42);
+  border-radius: 11px;
+  padding: 13px 24px;
+  color: #f1d66a;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(212, 175, 55, 0.035);
+  transition: all 0.25s ease;
+}
+
+.btn-outline:hover {
+  transform: translateY(-2px);
+  background: rgba(212, 175, 55, 0.1);
+  border-color: #ffd700;
+  color: #fff;
+}
+
+.nav-link {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: rgba(226, 232, 240, 0.85);
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #ffd700;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes particle {
+  0% { transform: translate3d(0, 30px, 0) scale(0.7); opacity: 0; }
+  25% { opacity: 0.55; }
+  50% { transform: translate3d(18px, -10px, 0) scale(1); opacity: 0.8; }
+  75% { opacity: 0.35; }
+  100% { transform: translate3d(-8px, -75px, 0) scale(0.6); opacity: 0; }
+}
+
+@keyframes orb {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(30px, 20px, 0) scale(1.15); }
+}
+
+@keyframes orbReverse {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(-35px, -20px, 0) scale(1.12); }
+}
+
+@keyframes shine {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.animate-float { animation: float 4.5s ease-in-out infinite; }
+.animate-particle { animation: particle 7s ease-in-out infinite; }
+.animate-orb { animation: orb 9s ease-in-out infinite; }
+.animate-orb-reverse { animation: orbReverse 11s ease-in-out infinite; }
+.animate-shine {
+  background-size: 200% auto;
+  animation: shine 3s linear infinite;
+}
+
+@media (max-width: 767px) {
+  .section-padding {
+    padding: 58px 16px;
+  }
+
+  .btn-gold,
+  .btn-outline {
+    width: 100%;
+    padding: 13px 18px;
+  }
+}
