@@ -17,7 +17,7 @@ export default function Contract() {
   const reduceMotion = useReducedMotion()
   const [copied, setCopied] = useState(false)
 
-  const contractAddress = 'Coming Soon — XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+  const contractAddress = '0xDb73181163bb33E6B1DC27600B485e1d7c7fdeAA'
 
   const handleCopy = async () => {
     if (contractAddress.includes('Coming Soon')) return
@@ -34,7 +34,7 @@ export default function Contract() {
   return (
     <section
       id="contract"
-      className="relative isolate overflow-visible bg-[#03103A] py-24 sm:py-28 lg:py-32"
+      className="relative isolate overflow-visible bg-[#03103A] py-10 sm:py-12 lg:py-20"
     >
       {/* ───────────────── Blue Gradient — Section Start ───────────────── */}
 
@@ -246,7 +246,7 @@ export default function Contract() {
 
             {/* ───────────────── Verification Header ───────────────── */}
 
-            <div className="relative mb-7 flex flex-col gap-5 border-b border-[#D4A63A]/10 pb-7 sm:flex-row sm:items-center sm:justify-between">
+            {/* <div className="relative mb-7 flex flex-col gap-5 border-b border-[#D4A63A]/10 pb-7 sm:flex-row sm:items-center sm:justify-between">
 
               <div className="flex items-center gap-4">
                 <motion.div
@@ -278,15 +278,6 @@ export default function Contract() {
                     BVT Smart Contract
                   </p>
 
-                  <div className="mt-1 flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-[#FFD84D] shadow-[0_0_8px_rgba(255,216,77,0.7)]" />
-                    <span className="font-display text-[10px] uppercase tracking-[0.20em] text-[#D8E7FF]/60">
-                      Verification Status
-                    </span>
-                    <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-[#FFD84D]">
-                      Pending Launch
-                    </span>
-                  </div>
                 </div>
               </div>
 
@@ -295,11 +286,11 @@ export default function Contract() {
                   Blockchain • BEP-20
                 </span>
               </div>
-            </div>
+            </div> */}
 
             {/* ───────────────── Token Details ───────────────── */}
 
-            <div className="relative mb-8">
+            {/* <div className="relative mb-8">
               <div className="mb-4 flex items-center justify-between">
                 <p className="font-display text-[10px] uppercase tracking-[0.24em] text-[#D8E7FF]/58">
                   Token Information
@@ -345,7 +336,7 @@ export default function Contract() {
                   </motion.div>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {/* ───────────────── Contract Address ───────────────── */}
 
@@ -389,7 +380,9 @@ export default function Contract() {
 
                 {/* Explorer */}
                 <a
-                  href="#faq"
+                  href={`https://bscscan.com/address/${contractAddress}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group flex shrink-0 items-center justify-center gap-2 rounded-2xl border border-[#FFD84D]/25 bg-gradient-to-r from-[#FFD21C]/10 to-[#D4A63A]/5 px-6 py-4 text-sm font-medium text-[#FFE477] transition-all duration-300 hover:border-[#FFD84D]/50 hover:bg-[#FFD21C]/15 hover:shadow-[0_0_28px_rgba(255,216,77,0.12)] lg:min-w-[210px]"
                 >
                   <ExternalLink
@@ -398,10 +391,6 @@ export default function Contract() {
                   />
 
                   <span>Explorer</span>
-
-                  <span className="text-[#D8E7FF]/52">
-                    Coming Soon
-                  </span>
                 </a>
               </div>
             </div>
@@ -439,7 +428,7 @@ export default function Contract() {
         </Reveal>
 
         {/* ───────────────── Bottom Status ───────────────── */}
-
+{/* 
         <Reveal variant="rise" delay={0.2} className="mt-8">
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-center">
             <div className="flex items-center gap-2">
@@ -467,7 +456,7 @@ export default function Contract() {
               </span>
             </div>
           </div>
-        </Reveal>
+        </Reveal> */}
 
       </div>
 

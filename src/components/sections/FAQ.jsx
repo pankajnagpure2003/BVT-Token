@@ -184,7 +184,7 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="relative isolate overflow-visible bg-[#030E35] py-24 sm:py-28 lg:py-32"
+      className="relative isolate overflow-visible bg-[#030E35] py-10 sm:py-12 lg:py-20"
     >
       {/* ───────────── START BLUE GRADIENT ───────────── */}
 
@@ -384,14 +384,14 @@ export default function FAQ() {
             <span className="h-px w-12 bg-gradient-to-l from-transparent via-[#FFD84D] to-[#C9A84E]" />
           </div>
 
-          <div className="mb-5 flex justify-center">
+          {/* <div className="mb-5 flex justify-center">
             <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#C9A84E]/20 bg-[#C9A84E]/5 shadow-[0_0_35px_rgba(138,106,36,0.12)]">
               <HelpCircle
                 size={27}
                 className="text-[#FFD84D]"
               />
             </div>
-          </div>
+          </div> */}
 
           <h2 className="text-balance font-display text-4xl font-semibold leading-[1.08] tracking-[-0.025em] text-white sm:text-5xl lg:text-6xl">
             Frequently asked{' '}
@@ -427,7 +427,7 @@ export default function FAQ() {
 
         {/* ───────────── Bottom Info ───────────── */}
 
-        <Reveal variant="rise" delay={0.2}>
+        {/* <Reveal variant="rise" delay={0.2}>
           <div className="mt-10 flex flex-col items-center justify-center gap-3 text-center sm:flex-row">
             <div className="flex items-center gap-2 rounded-full border border-[#C9A84E]/15 bg-[#06133D]/50 px-4 py-2">
               <span className="h-1.5 w-1.5 rounded-full bg-[#C9A84E] shadow-[0_0_9px_rgba(201,168,78,0.8)]" />
@@ -447,7 +447,7 @@ export default function FAQ() {
               </span>
             </div>
           </div>
-        </Reveal>
+        </Reveal> */}
 
       </div>
     </section>

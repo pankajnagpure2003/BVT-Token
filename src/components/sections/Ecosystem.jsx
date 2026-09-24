@@ -58,8 +58,8 @@ export default function Ecosystem() {
       className="
         relative isolate overflow-hidden
         bg-[#04134A]
-        py-24
-        lg:py-32
+           py-10
+        lg:py-20
       "
     >
       {/* =========================================================

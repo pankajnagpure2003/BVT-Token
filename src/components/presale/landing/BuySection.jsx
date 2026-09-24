@@ -104,7 +104,7 @@ export default function BuySection({
   return (
     <section
       id="how-to-buy"
-      className="relative overflow-hidden bg-[#020B2D] py-10 sm:py-24 lg:py-28"
+      className="relative overflow-hidden bg-[#020B2D] py-10 sm:py-8 lg:py-10"
     >
       <div className="pointer-events-none absolute inset-0">
         <div
@@ -122,7 +122,7 @@ export default function BuySection({
         <div className="absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-blue-500/[0.05] blur-[110px]" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -143,17 +143,42 @@ export default function BuySection({
 
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base">
             Follow these steps to secure your BVT tokens during the presale.
+          </p>
+          <p className="mx-auto mt-2 max-w-2xl text-sm font-medium leading-7 text-[#FFD700] sm:text-base">
             Pay with {appConfig.usdtSymbol} — 1 {appConfig.usdtSymbol} ={' '}
             {appConfig.tokensPerUsdt} {appConfig.tokenSymbol}.
           </p>
         </motion.div>
+
+        <div className="order-2 mt-10 mb-10 grid gap-4 md:order-1 md:mt-0 sm:grid-cols-2 lg:grid-cols-4">
+          {STEPS.map(({ Icon, number, title, desc }, i) => (
+            <motion.div
+              key={title}
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ delay: i * 0.08, duration: 0.55 }}
+              whileHover={{ y: -7 }}
+              className="group relative overflow-hidden border border-white/[0.08] bg-[#07143A] p-6 transition-all duration-300 hover:border-[#D4AF37]/30 hover:bg-[#091A47]"
+            >
+              <div className="absolute right-5 top-5 font-mono text-[10px] font-bold tracking-[0.15em] text-[#D4AF37]/40">
+                {number}
+              </div>
+              <div className="mb-7 flex h-12 w-12 items-center justify-center border border-[#D4AF37]/20 bg-[#D4AF37]/[0.06]">
+                <Icon size={22} strokeWidth={1.7} className="text-[#D4AF37]" />
+              </div>
+              <h3 className="text-base font-black text-white">{title}</h3>
+              <p className="mt-2 text-xs leading-6 text-slate-400">{desc}</p>
+            </motion.div>
+          ))}
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="mx-auto w-full max-w-4xl"
+          className="order-1 mx-auto mt-8 w-full max-w-4xl md:order-2 md:mt-0"
         >
           <div className="relative overflow-hidden border border-[#D4AF37]/20 bg-[#050F2B] shadow-[0_20px_80px_rgba(0,0,0,.25)]">
             <motion.div
@@ -350,28 +375,6 @@ export default function BuySection({
           </div>
         </motion.div>
 
-        <div className="mt-10 grid gap-4 sm:mt-12 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4">
-          {STEPS.map(({ Icon, number, title, desc }, i) => (
-            <motion.div
-              key={title}
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ delay: i * 0.08, duration: 0.55 }}
-              whileHover={{ y: -7 }}
-              className="group relative overflow-hidden border border-white/[0.08] bg-[#07143A] p-6 transition-all duration-300 hover:border-[#D4AF37]/30 hover:bg-[#091A47]"
-            >
-              <div className="absolute right-5 top-5 font-mono text-[10px] font-bold tracking-[0.15em] text-[#D4AF37]/40">
-                {number}
-              </div>
-              <div className="mb-7 flex h-12 w-12 items-center justify-center border border-[#D4AF37]/20 bg-[#D4AF37]/[0.06]">
-                <Icon size={22} strokeWidth={1.7} className="text-[#D4AF37]" />
-              </div>
-              <h3 className="text-base font-black text-white">{title}</h3>
-              <p className="mt-2 text-xs leading-6 text-slate-400">{desc}</p>
-            </motion.div>
-          ))}
-        </div>
       </div>
     </section>
   )

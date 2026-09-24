@@ -561,7 +561,7 @@ export default function Hero() {
     </motion.div>
 
     {/* Live status */}
-    <div className="mt-1.5 flex items-center justify-center gap-2">
+    {/* <div className="mt-1.5 flex items-center justify-center gap-2">
       <motion.span
         className="h-1 w-1 rounded-full bg-[#FFD84D]"
         animate={{
@@ -581,7 +581,7 @@ export default function Hero() {
       <span className="font-display text-[8px] uppercase tracking-[0.25em] text-[#D8C98E]/32">
         BVT Live Data
       </span>
-    </div>
+    </div> */}
   </div>
 </Reveal>
         </div>

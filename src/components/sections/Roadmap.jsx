@@ -146,8 +146,8 @@ export default function Roadmap() {
       className="
         relative isolate overflow-visible
         bg-[#020B2D]
-        py-24
-        lg:py-32
+           py-10
+        lg:py-20
       "
     >
       {/* =========================================================

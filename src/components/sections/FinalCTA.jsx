@@ -10,7 +10,7 @@ export default function FinalCTA() {
 
   return (
     <section
-      className="relative isolate overflow-visible bg-[#020B2D] py-28 sm:py-32 lg:py-40"
+      className="relative isolate overflow-visible bg-[#020B2D] py-10 sm:py-12 lg:py-20"
     >
       {/* ───────────── START BLUE GRADIENT ───────────── */}
       <div
@@ -243,10 +243,10 @@ export default function FinalCTA() {
       <div className="relative z-10 mx-auto max-w-5xl px-6 text-center lg:px-10">
 
         {/* Logo */}
-        <Reveal variant="scale">
+        {/* <Reveal variant="scale">
           <div className="relative mx-auto mb-10 flex h-28 w-28 items-center justify-center">
 
-            {/* Outer glow */}
+         
             <motion.div
               className="absolute inset-0 rounded-full border border-[#FFD84D]/20 bg-[#0066FF]/10 shadow-[0_0_70px_rgba(0,102,255,0.25)]"
               animate={
@@ -268,7 +268,7 @@ export default function FinalCTA() {
               }
             />
 
-            {/* Inner ring */}
+        
             <div className="absolute inset-3 rounded-full border border-[#249BFF]/20 bg-[#06133D]/80 backdrop-blur-md" />
 
             <motion.img
@@ -296,7 +296,7 @@ export default function FinalCTA() {
               }
             />
           </div>
-        </Reveal>
+        </Reveal> */}
 
         {/* Eyebrow */}
         <Reveal variant="rise" delay={0.05}>
@@ -410,7 +410,7 @@ export default function FinalCTA() {
 
         {/* ───────────── Bottom Trust Line ───────────── */}
 
-        <Reveal variant="rise" delay={0.32}>
+        {/* <Reveal variant="rise" delay={0.32}>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
 
             <div className="flex items-center gap-2">
@@ -442,7 +442,7 @@ export default function FinalCTA() {
             </div>
 
           </div>
-        </Reveal>
+        </Reveal> */}
 
       </div>
     </section>

@@ -118,7 +118,7 @@ export default function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-5 lg:flex xl:gap-6" aria-label="Primary">
+        <nav className="hidden items-center gap-5 xl:flex xl:gap-6" aria-label="Primary">
           {NAV_LINKS.map((link) => (
             <NavLink
               key={link.path}
@@ -133,7 +133,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-3 xl:flex">
           <a
             href={WHITEPAPER_URL}
             target="_blank"
@@ -175,7 +175,7 @@ export default function Header() {
 
         <button
           type="button"
-          className="flex items-center justify-center rounded-lg p-2 text-bone transition-colors hover:bg-white/5 lg:hidden"
+          className="flex items-center justify-center rounded-lg p-2 text-bone transition-colors hover:bg-white/5 xl:hidden"
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => {
@@ -210,7 +210,7 @@ export default function Header() {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden border-b border-gold-500/10 bg-transparent backdrop-blur-xl lg:hidden"
+            className="overflow-hidden border-b border-gold-500/10 bg-transparent backdrop-blur-xl"
           >
             <div className="flex flex-col gap-1 px-6 py-6">
               {NAV_LINKS.map((link, i) => (

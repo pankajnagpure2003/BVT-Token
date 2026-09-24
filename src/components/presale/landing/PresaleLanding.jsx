@@ -164,9 +164,9 @@ function Hero() {
             employment, education, healthcare and digital services.
           </motion.p>
 
-          <motion.div variants={fadeIn} className="mt-7 flex flex-wrap items-center justify-center gap-3 text-xs font-bold uppercase tracking-wider text-slate-300 lg:justify-start sm:text-sm">
+          {/* <motion.div variants={fadeIn} className="mt-7 flex flex-wrap items-center justify-center gap-3 text-xs font-bold uppercase tracking-wider text-slate-300 lg:justify-start sm:text-sm">
             <span>Blockchain Network</span><b className="text-[#D4AF37]">•</b><span>BEP-20</span><b className="text-[#D4AF37]">•</b><span>10 Billion Total Supply</span>
-          </motion.div>
+          </motion.div> */}
 
           <motion.div variants={fadeIn} className="mt-8 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
             <a  href="#how-to-buy" className="btn-gold inline-flex items-center justify-center gap-2"><Wallet size={18} /> Buy BVT Now</a>
@@ -183,7 +183,7 @@ function Hero() {
             <img src={LOGO} alt="Bhavishya Vision Token logo" className="relative z-10 mx-auto w-[78%] drop-shadow-[0_0_35px_rgba(212,175,55,.32)] sm:w-[86%]" />
             <div className="absolute inset-0 rounded-full border border-[#FFD700]/10" />
           </div>
-          <div className="mt-5 grid grid-cols-3 gap-2">
+          {/* <div className="mt-5 grid grid-cols-3 gap-2">
             {[
               ['10B', 'Total Supply'], ['BEP-20', 'Standard'], ['Blockchain ', 'Network']
             ].map(([v, l]) => (
@@ -192,7 +192,7 @@ function Hero() {
                 <div className="mt-1 text-[9px] uppercase tracking-wider text-slate-500">{l}</div>
               </div>
             ))}
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </section>
@@ -275,7 +275,7 @@ function PresaleStatus() {
                 Current Stage
               </span>
               <span className="font-black text-[#FFD700]">
-                02 / 04
+                01 / 04
               </span>
             </div>
           </div>
@@ -318,9 +318,9 @@ function PresaleStatus() {
                     </p>
 
                     <p className="mt-1 text-lg font-black text-white">
-                      Stage 2
+                      Stage 1
                       <span className="ml-2 text-sm font-medium text-slate-500">
-                        Community Round
+                        Early Access
                       </span>
                     </p>
                   </div>
@@ -468,10 +468,10 @@ function PresaleStatus() {
 
 function PresaleDetails() {
   const details = [
-    ['Token Name', 'BVT TOKEN'], ['Symbol', 'BVT'], ['Blockchain', 'Blockchain'], ['Standard', 'BEP-20'],
-    ['Total Supply', '10,000,000,000 BVT'], ['Decimals', '18'], ['Presale Allocation', 'To Be Announced'],
-    ['Presale Price', '$0.01'], ['Minimum Purchase', '100 TRX'], ['Maximum Purchase', '500,000 TRX'],
-    ['Token Claim', 'After Presale Ends'], ['Listing Price', 'To Be Announced']
+    ['Token Name', 'BVT TOKEN'], ['Symbol', 'BVT'],  ['Standard', 'BEP-20'],
+    ['Total Supply', '10,000,000,000 BVT'], ['Decimals', '18'], 
+    ['Presale Price', '$0.01'], 
+    
   ]
   const stages = [
     ['STAGE 01 — EARLY ACCESS', '$0.0015', '2,500,000,000 BVT', 'Completed'],
@@ -1048,7 +1048,7 @@ function Security() {
   const [copied, setCopied] = useState(false)
   const [hovered, setHovered] = useState(null)
 
-  const contract = 'TXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+  const contract = '0x778254e4D33F0B84Ec17780FF4B8a753aB41F62a'
 
   const copy = async () => {
     try {
@@ -2032,17 +2032,17 @@ export default function PresaleLanding({ buyProps }) {
   return (
     <div className="overflow-x-hidden bg-[#020B2D] text-white selection:bg-[#0066FF]/30">
       <Hero />
-      <PresaleStatus />
+      {/* <PresaleStatus /> */}
       <BuySection {...buyProps} />
-      <PresaleDetails />
+      {/* <PresaleDetails />
       <Benefits />
       <Ecosystem />
       <Tokenomics />
       <Tokenomic />
       <Security />
       <FAQ />
-      <CTA />
-      <Disclaimer />
+      <CTA /> */}
+      {/* <Disclaimer /> */}
     </div>
   )
 }

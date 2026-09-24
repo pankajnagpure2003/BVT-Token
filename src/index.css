@@ -251,7 +251,7 @@ img {
 .section-padding {
   width: min(1200px, 100%);
   margin-inline: auto;
-  padding: 78px 24px;
+  padding: 30px 10px;
 }
 
 .btn-gold {
@@ -351,7 +351,7 @@ img {
 
 @media (max-width: 767px) {
   .section-padding {
-    padding: 58px 16px;
+    padding: 20px 16px;
   }
 
   .btn-gold,
