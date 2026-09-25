@@ -2,18 +2,16 @@ import { BrowserProvider, Contract, JsonRpcProvider } from 'ethers'
 import { appConfig, getWalletNetworkParams } from '../config/appConfig'
 import { erc20Abi } from '../abi/erc20Abi'
 import { presaleAbi } from '../abi/presaleAbi'
+import { getReownWalletProvider } from './reown'
 
 /** Read-only provider (stats without wallet) */
 export function getReadProvider() {
   return new JsonRpcProvider(appConfig.rpcUrl, appConfig.chainId)
 }
 
-/** MetaMask / injected wallet provider */
-export async function getBrowserProvider() {
-  if (!window.ethereum) {
-    throw new Error('MetaMask not found. Please install MetaMask.')
-  }
-  return new BrowserProvider(window.ethereum)
+/** Browser provider backed by the wallet selected in Reown AppKit. */
+export async function getBrowserProvider(walletProvider) {
+  return new BrowserProvider(walletProvider || getReownWalletProvider())
 }
 
 export function getTokenContract(providerOrSigner) {
@@ -29,9 +27,8 @@ export function getPresaleContract(providerOrSigner) {
 }
 
 /** Switch / add the configured chain in MetaMask */
-export async function ensureCorrectNetwork() {
-  const ethereum = window.ethereum
-  if (!ethereum) throw new Error('MetaMask not found')
+export async function ensureCorrectNetwork(walletProvider) {
+  const ethereum = walletProvider || getReownWalletProvider()
 
   const wanted = '0x' + appConfig.chainId.toString(16)
 

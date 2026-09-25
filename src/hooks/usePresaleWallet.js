@@ -13,6 +13,7 @@ import {
   getUsdtContract,
 } from '../lib/contracts'
 import { getErrorMessage, toWei } from '../lib/format'
+import { getReownAppKit } from '../lib/reown'
 
 const emptyStats = {
   saleActive: false,
@@ -95,10 +96,15 @@ export function usePresaleWallet() {
   }, [loadStats])
 
   useEffect(() => {
-    if (!window.ethereum) return undefined
+    let kit
+    try {
+      kit = getReownAppKit()
+    } catch {
+      return undefined
+    }
 
-    const onAccounts = (accounts) => {
-      const next = accounts[0] || ''
+    const onAccount = ({ address }) => {
+      const next = address || ''
       setAccount(next)
       if (next) loadWalletData(next)
       else {
@@ -108,14 +114,12 @@ export function usePresaleWallet() {
       }
     }
 
-    const onChain = () => refreshAll()
-
-    window.ethereum.on('accountsChanged', onAccounts)
-    window.ethereum.on('chainChanged', onChain)
+    const unsubscribeAccount = kit.subscribeAccount(onAccount, 'eip155')
+    const unsubscribeNetwork = kit.subscribeNetwork(() => refreshAll())
 
     return () => {
-      window.ethereum.removeListener('accountsChanged', onAccounts)
-      window.ethereum.removeListener('chainChanged', onChain)
+      unsubscribeAccount()
+      unsubscribeNetwork()
     }
   }, [loadWalletData, refreshAll])
 
@@ -123,13 +127,14 @@ export function usePresaleWallet() {
     try {
       setConnecting(true)
       showMessage('', '')
-      await ensureCorrectNetwork()
-      const provider = await getBrowserProvider()
-      const accounts = await provider.send('eth_requestAccounts', [])
-      const address = accounts[0]
-      setAccount(address)
-      await loadWalletData(address)
-      showMessage('success', 'Wallet connected')
+      const kit = getReownAppKit()
+      await kit.open({ view: 'Connect' })
+      const address = kit.getAccount('eip155')?.address
+      if (address) {
+        setAccount(address)
+        await loadWalletData(address)
+        showMessage('success', 'Wallet connected')
+      }
     } catch (error) {
       showMessage('error', getErrorMessage(error))
     } finally {
@@ -141,7 +146,8 @@ export function usePresaleWallet() {
     try {
       setBusy(true)
       showMessage('', '')
-      await ensureCorrectNetwork()
+      const walletProvider = getReownAppKit().getWalletProvider()
+      await ensureCorrectNetwork(walletProvider)
       const provider = await getBrowserProvider()
       const signer = await provider.getSigner()
       const usdt = getUsdtContract(signer)
@@ -161,7 +167,8 @@ export function usePresaleWallet() {
     try {
       setBusy(true)
       showMessage('', '')
-      await ensureCorrectNetwork()
+      const walletProvider = getReownAppKit().getWalletProvider()
+      await ensureCorrectNetwork(walletProvider)
       const amountWei = toWei(humanAmount, appConfig.usdtDecimals)
       if (amountWei <= 0n) {
         showMessage('error', 'Enter a valid USDT amount')
